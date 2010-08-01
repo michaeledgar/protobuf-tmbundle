@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wKU
+
+require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require "#{ENV['TM_SUPPORT_PATH']}/lib/escape"
+
+method_name = ENV["TM_SELECTED_TEXT"] || ENV["TM_CURRENT_WORD"] or
+  TextMate.exit_show_tool_tip(
+    "Please type the new function's name or use the def⇥ snippet."
+  )
+
+print &lt;&lt;END_SNIPPET
+${0:optional} ${1:type} #{e_sn method_name} = ${2:-1};
+END_SNIPPET
+</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>$</string>
+	<key>name</key>
+	<string>New Field With Name</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>meta.message-declaration.protobuf</string>
+	<key>uuid</key>
+	<string>AD99D1DA-0A8C-47FF-AD80-681F3F4E5537</string>
+</dict>
+</plist>
