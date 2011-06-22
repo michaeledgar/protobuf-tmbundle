@@ -10,7 +10,7 @@ For the most part. Though one neat feature is that - unlike most TextMate langua
     
 outside of a message (or group, or extend...) declaration, it won't highlight. For the most part, this will be true: an rpc method declaration won't highlight except in a `Service` declaration.
 
-Snippets are location-aware, so using the `opt` snippet to generate an option will help you generate this in a message:
+Snippets are location-aware, so the `field` snippet (which generates a new message field) won't work except in a message. so using the `opt` snippet to generate an option will help you generate this in a message:
 
     message Foo {
       option message_set_wire_format = true;
@@ -28,7 +28,7 @@ Notice how method options are structured slightly differently.
 
 Also, TextMate has a shift-enter idiom for creating new functions/methods. At the top-level, this bundle will generate a new Message. Inside a message, this command will generate a new field. Inside an enum, it will generate a new enum value declaration (and automatically `UPCASE_AND_UNDERSCORE` the enum value name). Inside a Service declaration, it will generate a new rpc method.
 
-These things are possible because this bundle actually understands the structure of the entire message.
+These things are possible because this bundle actually understands the structure of the entire message, which is easy due to the intentionally-simple structure of .proto files.
 
 ## Installation
 
