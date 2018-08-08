@@ -126,6 +126,61 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>\b(oneof)\s+([A-Za-z0-9_]+)\s*\{</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.oneof.protobuf</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.oneof.protobuf</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>meta.oneof-declaration.protobuf</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>constant.other.user-defined.protobuf</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.protobuf</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b([A-Za-z0-9_]+)\s*=\s*(\d+)\b</string>
+					<key>name</key>
+					<string>meta.individual-oneof-definition.protobuf</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#any_field</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>\b(service)\s+([A-Za-z0-9_]+)\s*\{</string>
 			<key>beginCaptures</key>
 			<dict>
