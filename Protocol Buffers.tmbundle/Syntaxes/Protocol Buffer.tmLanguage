@@ -364,6 +364,10 @@
 					<key>include</key>
 					<string>#user_defined_message_field</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#reserved_field</string>
+				</dict>
 			</array>
 		</dict>
 		<key>anywhere_option</key>
@@ -542,6 +546,24 @@
 			</dict>
 			<key>match</key>
 			<string>(repeated)?\s+?(((s|u)?int|s?fixed)(32|64)|string|bytes|bool)\s+(\S+)\s*=\s*(\d+)</string>
+		</dict>
+		<key>reserved_field</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.occurrences.protobuf</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.field-tag.protobuf</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(reserved)\s+(\d+)</string>
 		</dict>
 		<key>rpc_primitive_attribute</key>
 		<dict>
