@@ -459,7 +459,7 @@
 		<key>group_field</key>
 		<dict>
 			<key>begin</key>
-			<string>(required|optional|repeated)\s+(group)\s+([A-Za-z0-9_]+)\s*=\s*(\d+)\s*{</string>
+			<string>(repeated)?\s+?(group)\s+([A-Za-z0-9_]+)\s*=\s*(\d+)\s*{</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -541,7 +541,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(required|optional|repeated)\s+(((s|u)?int|s?fixed)(32|64)|string|bytes|bool)\s+(\S+)\s*=\s*(\d+)</string>
+			<string>(repeated)?\s+?(((s|u)?int|s?fixed)(32|64)|string|bytes|bool)\s+(\S+)\s*=\s*(\d+)</string>
 		</dict>
 		<key>rpc_primitive_attribute</key>
 		<dict>
@@ -667,7 +667,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(required|optional|repeated)\s+([A-Za-z.]*)\s+(\S+)\s*=\s*(\d+)</string>
+			<string>(repeated)?\s+?([A-Za-z._]*)\s+(\S+)\s*=\s*(\d+)</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>
