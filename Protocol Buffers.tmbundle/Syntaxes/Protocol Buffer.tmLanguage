@@ -34,6 +34,25 @@
 			<string>meta.import.declaration.protobuf</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.syntax.protobuf</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.syntax.protobuf</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(syntax)\s*=\s*(".*")</string>
+			<key>name</key>
+			<string>meta.syntax.declaration.protobuf</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>\b(message)\s+([A-Za-z0-9_]+)\s*\{</string>
 			<key>captures</key>
