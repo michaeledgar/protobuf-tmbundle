@@ -315,7 +315,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(package)\s+([A-Za-z0-9.]+)\s*;</string>
+			<string>\b(package)\s+([A-Za-z0-9._]+)\s*;</string>
 			<key>name</key>
 			<string>meta.package.protobuf</string>
 		</dict>
