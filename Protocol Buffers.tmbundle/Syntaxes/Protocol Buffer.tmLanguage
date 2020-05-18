@@ -262,7 +262,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b(rpc)\s+([A-Za-z0-9_]+)\s+\(([A-Za-z0-9_.]+)\)\s*(returns)\s*\(([A-Za-z0-9_.]+)\)\s*;</string>
+					<string>\b(rpc)\s+([A-Za-z0-9_]+)\s*\(([A-Za-z0-9_.]+)\)\s*(returns)\s*\(([A-Za-z0-9_.]+)\)\s*;</string>
 					<key>name</key>
 					<string>meta.individual-rpc-call.protobuf</string>
 				</dict>
